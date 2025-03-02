@@ -1,0 +1,14 @@
+<div class="m-5">
+  <h1>Parent Component</h1>
+
+  <app-child [user]="user" *ngIf="showChild"></app-child>
+  
+  <button class="btn btn-primary m-3" (click)="changeAge()">
+    Increase Age
+  </button>
+  <button class="btn btn-primary m-3" (click)="changeUser()">
+    changeUser
+  </button>
+
+  <button class="btn btn-danger m-3" (click)="toggleChild()">Toggle Child</button>
+</div>
