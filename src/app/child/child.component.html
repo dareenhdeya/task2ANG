@@ -3,4 +3,8 @@
 
   <p>Name: {{ user.name }}</p>
   <p>Age: {{ user.age }}</p>
+
+  <div [ngStyle]="{ 'background-color': 'lightblue' }">
+    <ng-content></ng-content>
+  </div>
 </div>

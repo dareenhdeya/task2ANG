@@ -9,7 +9,7 @@ export class ChildComponent {
   @Input() user = { name: 'Dareen', age: 22 };
 
   ngOnInit() {
-    console.log('Component initialized!');
+    console.log('ngOnInit:Component initialized!');
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -21,13 +21,18 @@ export class ChildComponent {
   }
 
   ngAfterViewInit() {
-    console.log('View is initialized');
+    console.log('ngAfterViewInit:View is initialized');
   }
   ngAfterViewChecked() {
-    console.log('View checked for changes');
+    console.log('ngAfterViewChecked:View checked for changes');
   }
-
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit:content is initialized');
+  }
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked: Content checked');
+  }  
   ngOnDestroy() {
-    console.log('child component is being destroyed');
+    console.log('ngOnDestroy:child component is being destroyed');
   }
 }
